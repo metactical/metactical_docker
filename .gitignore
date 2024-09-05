@@ -1,0 +1,10 @@
+# VS Code
+.vscode/**
+!.vscode/extensions.json
+
+# VS Code devcontainer
+.devcontainer
+*.code-workspace
+
+# For mac
+.DS_Store

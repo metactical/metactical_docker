@@ -119,9 +119,6 @@ WORKDIR /home/frappe/frappe-bench
 # Install Metactical
 RUN bench get-app --branch version-14 metactical https://github.com/metactical/metactical.git
 
-# Install Sendgrid
-RUN bench get-app --branch version-14 sendgrid_integration https://github.com/metactical/sendgrid_integration.git
-
 RUN echo "{}" > sites/common_site_config.json
 
 FROM base as erpnext

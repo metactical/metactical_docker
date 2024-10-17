@@ -1,8 +1,12 @@
 version: "3"
 
 services:
+  builder:
+    build: .
+    image: frappe-metactical-dev:latest
+
   backend:
-    image: metactical/frappe-metactical-dev:latest
+    image: frappe-metactical-dev:latest
     depends_on:
       - db
     deploy:
@@ -26,7 +30,7 @@ services:
       - "8080:8080"
 
   configurator:
-    image: metactical/frappe-metactical-dev:latest
+    image: frappe-metactical-dev:latest
     depends_on:
       - backend
       - db

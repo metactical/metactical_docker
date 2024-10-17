@@ -49,4 +49,5 @@ envsubst '${BACKEND}
 	${CLIENT_MAX_BODY_SIZE}' \
   </templates/nginx/frappe.conf.template >/etc/nginx/conf.d/frappe.conf
 
+sudo /etc/init.d/supervisor start
 nginx -g 'daemon off;'

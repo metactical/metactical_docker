@@ -1,5 +1,5 @@
 # Use the official Ubuntu base image
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -52,7 +52,7 @@ RUN npm install -g yarn
 #     mysqladmin -u root password "${MYSQL_ROOT_PASSWORD}"
 
 # Install Frappe Bench
-RUN pip3 install --break-system-packages frappe-bench
+RUN pip3 install frappe-bench
 
 #COPY resources/nginx.conf /etc/nginx/conf.d/frappe.conf
 COPY resources/supervisor.conf /etc/supervisor/conf.d/frappe.conf
